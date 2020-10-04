@@ -17,3 +17,5 @@ def weather(bot, update):
     location = lst[1]
     bot.send_message(chat_id=chat_id, text=getWeather(location=str(location)))
 
+if __name__ == "__main__":
+    main()
