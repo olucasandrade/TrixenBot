@@ -10,3 +10,10 @@ def main():
     updater.start_polling()
     updater.idle()
 
+def weather(bot, update):
+    chat_id = update.message.chat_id
+    message = str(update.message.text)
+    lst = message.split(" ", 1)
+    location = lst[1]
+    bot.send_message(chat_id=chat_id, text=getWeather(location=str(location)))
+
